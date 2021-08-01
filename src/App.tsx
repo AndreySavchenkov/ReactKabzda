@@ -9,7 +9,7 @@ export const App = (props: any) => {
     console.log('App rendering')
     return (
         <div>
-            <OnOff on={true}/>
+            <OnOff />
             {/*<Accordion titleValue={'Menu'} collapsed={true}/>*/}
             {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
             {/*<Rating value={0}/>*/}
