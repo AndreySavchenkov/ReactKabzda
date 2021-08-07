@@ -5,7 +5,7 @@ type RatingPropsType = {
 }
 
 export const Rating = (props: RatingPropsType) => {
-    console.log('Rating rendering')
+    console.log('UncontrolledRating rendering')
 
     return (
         <div>
@@ -24,9 +24,7 @@ type StarPropsType = {
 
 export const Star = (props: StarPropsType) => {
     console.log('Star rendering')
-    if (props.selected === true) {
-        return <span><b>star </b></span>
-    } else {
-        return <span>star </span>
-    }
+
+    return <span>{props.selected ? <b>star </b> : 'star '}</span>
+
 }
