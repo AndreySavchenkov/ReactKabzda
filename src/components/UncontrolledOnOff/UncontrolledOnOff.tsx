@@ -3,6 +3,7 @@ import s from './UncontrolledOnOff.module.css'
 
 type PropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
 }
 
 
@@ -10,7 +11,7 @@ export const UncontrolledOnOff = (props: PropsType) => {
 
     console.log('UncontrolledOnOff rendering');
 
-    let [on, setOn] = useState(false); //hook with init value
+    let [on, setOn] = useState(props.defaultOn ? props.defaultOn : false); //hook with init value
     console.log(on)
 
     const onStyle = {
