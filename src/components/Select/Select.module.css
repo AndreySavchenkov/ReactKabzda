@@ -1,0 +1,12 @@
+.select span.main{
+    border: 1px solid black;
+    display: inline-block;
+}
+.items{
+    position: absolute;
+    border: 1px solid black;
+    padding: 5px;
+}
+.active{
+
+}

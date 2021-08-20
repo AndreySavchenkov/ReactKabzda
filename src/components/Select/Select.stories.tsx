@@ -12,6 +12,7 @@ export const WithValue: Story<SelectPropsType> = (args) =>
     <>
         <Select
             onChange={action('value changed')}
+
             value={'2'}
             items={[
                 {value: '1', title: 'Minsk'},
