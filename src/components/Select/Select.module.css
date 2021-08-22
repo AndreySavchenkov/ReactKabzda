@@ -1,6 +1,8 @@
 .select span.main{
     border: 1px solid black;
     display: inline-block;
+    min-height: 20px;
+    min-width: 40px;
 }
 .items{
     position: absolute;
@@ -9,4 +11,8 @@
 }
 .active{
 
+}
+.item .selected{
+    background-color: blue;
+    color: white;
 }

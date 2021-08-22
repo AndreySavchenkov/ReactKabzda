@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ComponentStory, ComponentMeta, Story} from '@storybook/react';
 import {Select, SelectPropsType} from "./Select";
 import {action} from "@storybook/addon-actions";
@@ -8,31 +8,44 @@ export default {
     component: Select,
 }
 
-export const WithValue: Story<SelectPropsType> = (args) =>
-    <>
-        <Select
-            onChange={action('value changed')}
+export const WithValue: Story<SelectPropsType> = (args) => {
 
-            value={'2'}
-            items={[
-                {value: '1', title: 'Minsk'},
-                {value: '2', title: 'Grodno'},
-                {value: '3', title: 'Lodz'}
-            ]}
-        />
-    </>
+    const [value, setValue] = useState('2')
 
-export const WithoutValue: Story<SelectPropsType> = (args) =>
-    <>
-        <Select
-            onChange={action('value changed')}
-            items={[
-                {value: '1', title: 'Minsk'},
-                {value: '2', title: 'Grodno'},
-                {value: '1', title: 'Lodz'}
-            ]}
-        />
-    </>
+    return (
+        <>
+            <Select
+                onChange={setValue}
+                value={value}
+                items={[
+                    {value: '1', title: 'Minsk'},
+                    {value: '2', title: 'Grodno'},
+                    {value: '3', title: 'Lodz'}
+                ]}
+            />
+        </>
+    )
+}
 
+
+// export const WithoutValue: Story<SelectPropsType> = (args) => {
+//
+//     const [value, setValue] = useState(null)
+//
+//     return (
+//         <>
+//             <Select
+//                 onChange={setValue}
+//                 value={value}
+//                 items={[
+//                     {value: '1', title: 'Minsk'},
+//                     {value: '2', title: 'Grodno'},
+//                     {value: '1', title: 'Lodz'}
+//                 ]}
+//             />
+//         </>
+//     )
+//
+// }
 
 
