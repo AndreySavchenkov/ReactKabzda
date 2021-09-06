@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {ComponentStory, ComponentMeta, Story} from '@storybook/react';
+import React from 'react';
+import {Story} from '@storybook/react';
 
-import {Rating, RatingPropsType, RatingValueType} from "./Rating";
+import {Rating, RatingPropsType} from "./Rating";
 
 export default {
     title: 'components/Rating',
